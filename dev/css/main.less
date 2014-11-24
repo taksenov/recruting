@@ -6,6 +6,8 @@
 @import "rating";
 @import "input";
 @import "price";
+@import "gradientmenu";
+@import "cart";
 
 @container-width : 1110px;
 @footer-height   : 155px;
@@ -103,7 +105,11 @@ body{
 
 
 .make-order-button {
-    .original-button (187px, 42px, url('../../static/img/common/cart.png'), 3px);
+    .original-button (176px, 37px, url('../../static/img/common/cart.png'), 3px);
+}
+
+.make-order-button-in-backet {
+    .original-button (187px, 42px, url('../../static/img/common/wallet.png'), 3px);
 }
 
 .send-response-button {
@@ -251,6 +257,12 @@ body{
     width: 208px;
     text-align: right;
     a {
+        .pfbeausanspro-regular;
+        font-size: 20px;
+        text-decoration: none;
+        color: #626262;
+    }
+    a b {
         .pfbeausanspro-regular;
         font-size: 20px;
         text-decoration: none;
@@ -429,7 +441,15 @@ body{
         }
 }
 .logoblock__cart {
-    //todo отстилизовать корзину с выпадашкой
+    p {
+        width: 104px;
+        height: 26px;
+        .pfbeausanspro-regular;
+        font-size: 12px;
+        margin-left: 26px;
+        margin-top: 0;
+
+    }
 }
 /* -------= logoblock =------- */
 
@@ -570,6 +590,10 @@ body{
     width: 330px;
     float: left;
 
+//border123
+//border: 1px solid #000000;
+
+
 }
 .itemexterier__vertical-divider {
     height: 291px;
@@ -602,6 +626,8 @@ body{
     height: 202px;
     float: left;
 
+
+
 }
 .itemexterier__center-propertyValue {
     width: 162px;
@@ -609,12 +635,16 @@ body{
     height: 202px;
     float: left;
 
+
+
 }
 .itemexterier__center-socNetworksIcons {
     width: 100%;
     margin-top: 38px;
     height: 44px;
     float: left;
+
+
 
 }
 .itemexterier__right-price {

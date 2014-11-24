@@ -1,11 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Method 1 - Using Display Table Attribute</title>
-
-<style>
-
+/* -------= градиентное сине-голубое меню =------- */
+@import "fonts";
+@import "mixins";
 
 .main {
     width: 1110px;
@@ -18,12 +13,38 @@
 .main a {
     line-height: 50px;
     display: block;
+    .pfbeausanspro-light;
+    font-size: 16px;
+    text-decoration: none;
+    color: #4b4b4b;
 
-
+    &:after {
+        margin-left: 6px;
+        content: "";
+        width: 9px;
+        height: 5px;
+        .inlineblock;
+        vertical-align: middle;
+        background: url('../../static/img/common/gradientmenu-corner.png') center center no-repeat;
+    }
 }
 
 .text-align-center {
     text-align: center;
+}
+
+.active-border {
+    //border: 1px solid #ff0000;
+    border-left: 1px solid #cecece;
+    border-top: 1px solid #cecece;
+    //cecece
+    height: 49px !important;
+}
+.small-border-top-block {
+    border-right: 1px solid #cecece;
+}
+.small-border-bottom-block {
+    border-left: 1px solid #cecece;
 }
 
 .inner1-1 {
@@ -228,57 +249,8 @@
     background: linear-gradient(90deg, #92c8e1, #afd9ec);
 }
 
-</style>
-
-</head>
-
-<body>
-
-
-    <div class="main">
-        <div class="inner1-1 text-align-center"><a href="#">КАТАЛОГ ПРОДУКЦИИ</a></div>    <!-- Каталог продукции -->
-
-        <div class="inner2-1"></div>    <!-- блок с уголком слева -->
-        <div class="inner2-2"></div>    <!-- блок без уголка слева -->
-        <div class="inner3-1"></div>    <!-- блок без уголка справа -->
-        <div class="inner3-2"></div>    <!-- блок с уголком справа -->
-
-        <div class="inner4-1 text-align-center"><a href="#">ВСЕ БРЕНДЫ</a></div>    <!-- все бренды -->
-
-        <div class="inner5-1"></div>    <!-- блок с уголком слева -->
-        <div class="inner5-2"></div>    <!-- блок без уголка слева -->
-        <div class="inner6-1"></div>    <!-- блок без уголка справа -->
-        <div class="inner6-2"></div>    <!-- блок с уголком справа -->
-
-        <div class="inner7-1 text-align-center"><a href="#">ПОДАРКИ НА 14 ФЕВРАЛЯ</a></div>    <!-- подарки на 14 февраля -->
-
-        <div class="inner8-1"></div>    <!-- блок с уголком слева -->
-        <div class="inner8-2"></div>    <!-- блок без уголка слева -->
-        <div class="inner9-1"></div>    <!-- блок без уголка справа -->
-        <div class="inner9-2"></div>    <!-- блок с уголком справа -->
-
-        <div class="inner10-1 text-align-center"><a href="#">ПОДАРКИ НА 23 ФЕВРАЛЯ</a></div>   <!-- подарки на 23 февраля -->
-
-        <div class="inner11-1"></div>   <!-- блок с уголком слева -->
-        <div class="inner11-2"></div>   <!-- блок без уголка слева -->
-        <div class="inner12-1"></div>   <!-- блок без уголка справа -->
-        <div class="inner12-2"></div>   <!-- блок с уголком справа -->
-
-        <div class="inner13-1 text-align-center"><a href="#">ПОДАРКИ НА 8 МАРТА</a></div>   <!-- подарки на 8 марта -->
-
-    </div>
+/* -------= градиентное сине-голубое меню =------- */
 
 
 
 
-
-
-
-
-
-
-
-
-
-    </body>
-</html>

@@ -1,0 +1,270 @@
+/* --------- Fonts --------- */
+
+@import "fonts";
+
+/* --------- Mixins --------- */
+
+@import "mixins";
+
+/* --------- корзина --------- */
+
+.header-option__card {
+    position: relative;
+
+    &.active {
+
+        .backet-popup {
+            left: -283px;
+            opacity: 1;
+        }
+    }
+}
+
+.header-option__backet {
+    .inlineblock;
+    padding-right: 35px;
+    background: url("../../static/img/common/backet.png") right center no-repeat;
+    font-size: 14px;
+    color: #17709a;
+    text-transform: uppercase;
+    line-height: 31px;
+    text-decoration: none;
+    margin-top: 52px;
+    margin-left: 24px;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -14px;
+        background: url("../../static/img/common/str-down.png") 0 0 no-repeat;
+        width: 9px;
+        height: 5px;
+        top: 64px;
+    }
+}
+
+
+/*---------Popup Корзины--------*/
+
+.backet-popup {
+    position: absolute;
+    z-index: 666;
+    left: -9999px;
+    top: 80px;
+    opacity: 0;
+    .transition(opacity .2s);
+}
+
+.backet-popup__body {
+    background: url("../../static/img/common/bottom-side.png") 0 0 no-repeat;
+    width: 470px;
+    padding-top: 11px;
+}
+
+.backet-popup__wrap {
+    background: url("../../static/img/common/bottom-side.png") 0 bottom no-repeat;
+    padding-bottom: 11px;
+    width: 470px;
+    position: relative;
+}
+
+.backet-popup__title {
+    position: absolute;
+    background: url("../../static/img/common/top-side.png") 0 0 no-repeat;
+    width: 217px;
+    height: 46px;
+    top: -57px;
+    right: 0px;
+}
+
+.backet-popup__content {
+    padding: 13px 17px 0;
+}
+
+.backet-popup__scroll {
+    max-height: 270px;
+    overflow: auto;
+    position: relative;
+    outline: none;
+}
+
+.backet-popup__text {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 7px;
+    position: absolute;
+    top: 26px;
+    left: 38px;
+    cursor: pointer;
+    background: url("../../static/img/common/blue_str_up.png") right 5px no-repeat;
+    padding-right: 15px;
+}
+
+.backet-popup__text {
+    .inlineblock;
+    margin-left: 3px;
+    line-height: 16px;
+    text-decoration: underline;
+    text-transform: uppercase;
+
+    a {
+        .pfbeausanspro-regular;
+        font-size: 14px;
+        color: #17709a;
+    }
+}
+
+.backet-popup__text-ico {
+    .inlineblock;
+    background: url("../../static/img/common/backet.png") right center no-repeat;
+    width: 32px;
+    height: 26px;
+    margin-top: -5px;
+    margin-left: 3px;
+}
+
+.backet__item-pic {
+    .inlineblock;
+    position: relative;
+    width: 80px;
+    height: 70px;
+    margin-top: 11px;
+}
+
+.backet__item-desc {
+    .inlineblock;
+    margin-left: 15px;
+    padding-top: 15px;
+    width: 200px;
+}
+
+.backet__item-title {
+    .inlineblock;
+    margin-bottom: 11px;
+}
+
+.backet-popup-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #202020;
+}
+
+.backet__item-price {
+    margin-top: 15px;
+}
+
+.backet__item-price__title {
+    .inlineblock;
+    font-size: 12px;
+    line-height: 14px;
+    color: #838282;
+    padding-top: 4px;
+}
+
+.backet__item-price__value {
+    .inlineblock;
+    .pfbeausanspro-semibold;
+    font-size: 17px;
+    line-height: 19px;
+    color: #717171;
+}
+
+.backet__item-counter {
+    .inlineblock;
+    padding-top: 15px;
+
+    label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #595959;
+    }
+}
+
+.backet__item-input {
+    margin-top: 10px;
+    width: 24px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding-left: 13px;
+    outline: none;
+}
+
+.backet__item-delete {
+    .inlineblock;
+    margin-left: 15px;
+    padding-top: 40px;
+}
+
+.backet__item-delete__link {
+    display: block;
+    background: url("../../static/img/common/close.png") 0 0 no-repeat;
+    width: 18px;
+    height: 18px;
+    .transition(.2s);
+    margin-top: 4px;
+}
+
+.backet-popup__total {
+    .clearfix;
+    height: 37px;
+    padding-top: 25px;
+    border-top: 1px solid #cccccc;
+    margin-top: 20px;
+}
+
+.backet-popup__total-price {
+    float: left;
+}
+
+.backet-popup__total-title {
+    .inlineblock;
+    font-size: 12px;
+    line-height: 16px;
+    color: #4c4c4c;
+    padding-top: 6px;
+}
+
+.backet-popup__total-value {
+    .inlineblock;
+    .pfbeausanspro-semibold;
+    font-size: 22px;
+    line-height: 25px;
+    color: #000;
+}
+
+.backet-popup__total-button {
+ //   .blue-button(180px, 40px, url('images/ico/wallet.png'));
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.backet-popup__item {
+    width: 380px;
+    height: 82px !important;
+}
+
+
+.rouble {
+    &:after {
+        content: 'a';
+        .rouble;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

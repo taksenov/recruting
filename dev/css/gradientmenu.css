@@ -1,3 +1,4 @@
+/* -------= градиентное сине-голубое меню =------- */
 /* Fonts */
 @font-face {
   font-family: "MyriadPro-Bold";
@@ -124,3 +125,273 @@
   font-family: "MyriadPro-Semibold";
 }
 /* ------------------------------------------- */
+/* MIXINS */
+/* by https://bitbucket.org/wowua/ */
+.inlineblock {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  display: inline !ie;
+}
+.clearfix {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.main {
+  width: 1110px;
+  position: relative;
+  height: 50px;
+  margin-bottom: 54px;
+}
+.main a {
+  line-height: 50px;
+  display: block;
+  font-family: "pfbeausanspro-light";
+  font-size: 16px;
+  text-decoration: none;
+  color: #4b4b4b;
+}
+.main a:after {
+  margin-left: 6px;
+  content: "";
+  width: 9px;
+  height: 5px;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  display: inline !ie;
+  vertical-align: middle;
+  background: url('../../static/img/common/gradientmenu-corner.png') center center no-repeat;
+}
+.text-align-center {
+  text-align: center;
+}
+.active-border {
+  border-left: 1px solid #cecece;
+  border-top: 1px solid #cecece;
+  height: 49px !important;
+}
+.small-border-top-block {
+  border-right: 1px solid #cecece;
+}
+.small-border-bottom-block {
+  border-left: 1px solid #cecece;
+}
+.inner1-1 {
+  width: 276px;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 5px 0 0 0;
+  background: linear-gradient(90deg, #92c8e1, #afd9ec);
+}
+.inner2-1 {
+  width: 5px;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 276px;
+  border-radius: 0 5px 0 0;
+  background: linear-gradient(90deg, #afd9ec, #b6d7e6);
+  z-index: 1;
+  /*сверху*/
+}
+.inner2-2 {
+  width: 10px;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 276px;
+  background: linear-gradient(90deg, #afd9ec, #b6d7e6);
+  z-index: 0;
+  /*снизу*/
+}
+.inner3-1 {
+  width: 10px;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 276px;
+  background: linear-gradient(90deg, #92c8e1, #93c8e1);
+  z-index: 0;
+  /*снизу*/
+}
+.inner3-2 {
+  width: 5px;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 281px;
+  border-radius: 0 0 0 5px;
+  background: linear-gradient(90deg, #92c8e1, #93c8e1);
+  z-index: 1;
+  /*сверху*/
+}
+.inner4-1 {
+  width: 130px;
+  height: 100%;
+  position: absolute;
+  left: 286px;
+  bottom: 0;
+  background: linear-gradient(90deg, #92c8e1, #afd9ec);
+}
+.inner5-1 {
+  width: 5px;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 416px;
+  border-radius: 0 5px 0 0;
+  background: linear-gradient(90deg, #afd9ec, #b6d7e6);
+  z-index: 1;
+  /*сверху*/
+}
+.inner5-2 {
+  width: 10px;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 416px;
+  background: linear-gradient(90deg, #afd9ec, #b6d7e6);
+  z-index: 0;
+  /*снизу*/
+}
+.inner6-1 {
+  width: 10px;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 416px;
+  background: linear-gradient(90deg, #92c8e1, #93c8e1);
+  z-index: 0;
+  /*снизу*/
+}
+.inner6-2 {
+  width: 5px;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 421px;
+  border-radius: 0 0 0 5px;
+  background: linear-gradient(90deg, #92c8e1, #93c8e1);
+  z-index: 1;
+  /*сверху*/
+}
+.inner7-1 {
+  width: 230px;
+  height: 100%;
+  position: absolute;
+  left: 426px;
+  bottom: 0;
+  background: linear-gradient(90deg, #92c8e1, #afd9ec);
+}
+.inner8-1 {
+  width: 5px;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 656px;
+  border-radius: 0 5px 0 0;
+  background: linear-gradient(90deg, #afd9ec, #b6d7e6);
+  z-index: 1;
+  /*сверху*/
+}
+.inner8-2 {
+  width: 10px;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 656px;
+  background: linear-gradient(90deg, #afd9ec, #b6d7e6);
+  z-index: 0;
+  /*снизу*/
+}
+.inner9-1 {
+  width: 10px;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 656px;
+  background: linear-gradient(90deg, #92c8e1, #93c8e1);
+  z-index: 0;
+  /*снизу*/
+}
+.inner9-2 {
+  width: 5px;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 661px;
+  border-radius: 0 0 0 5px;
+  background: linear-gradient(90deg, #92c8e1, #93c8e1);
+  z-index: 1;
+  /*сверху*/
+}
+.inner10-1 {
+  width: 231px;
+  height: 100%;
+  position: absolute;
+  left: 666px;
+  bottom: 0;
+  background: linear-gradient(90deg, #92c8e1, #afd9ec);
+}
+.inner11-1 {
+  width: 5px;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 897px;
+  border-radius: 0 5px 0 0;
+  background: linear-gradient(90deg, #afd9ec, #b6d7e6);
+  z-index: 1;
+  /*сверху*/
+}
+.inner11-2 {
+  width: 10px;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 897px;
+  background: linear-gradient(90deg, #afd9ec, #b6d7e6);
+  z-index: 0;
+  /*снизу*/
+}
+.inner12-1 {
+  width: 10px;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 897px;
+  background: linear-gradient(90deg, #92c8e1, #93c8e1);
+  z-index: 0;
+  /*снизу*/
+}
+.inner12-2 {
+  width: 5px;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 902px;
+  border-radius: 0 0 0 5px;
+  background: linear-gradient(90deg, #92c8e1, #93c8e1);
+  z-index: 1;
+  /*сверху*/
+}
+.inner13-1 {
+  width: 203px;
+  height: 100%;
+  position: absolute;
+  left: 907px;
+  bottom: 0;
+  border-radius: 0 5px 0 0;
+  background: linear-gradient(90deg, #92c8e1, #afd9ec);
+}
+/* -------= градиентное сине-голубое меню =------- */
